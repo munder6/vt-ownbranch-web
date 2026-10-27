@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scratch Cart</title>
-<script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture captureException register get_session_id identify".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init("phc_zjZQhQyXuSHnQGd6bCsjxuUGSGFQvbTyiRRV4fdaFSow",{api_host:"https://us.i.posthog.com",person_profiles:"always",disable_session_recording:false,capture_exceptions:true});
-</script>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scratch Cart</title></head>
 <body style="font-family: sans-serif; padding: 24px">
   <h1>Your cart</h1>
   <ul id="items"></ul>
@@ -24,6 +19,5 @@ posthog.init("phc_zjZQhQyXuSHnQGd6bCsjxuUGSGFQvbTyiRRV4fdaFSow",{api_host:"https
     document.getElementById("items").innerHTML = items.map((i) => `<li>${i}</li>`).join("");
     document.getElementById("cart-total").textContent = `Total: ${items.length} items`;
   </script>
-<p><button id="ph-crash" onclick="(function(){class CheckoutCrash extends Error{constructor(m){super(m);this.name='CheckoutCrash';}}var e=new CheckoutCrash('proof: checkout crashed after the Pay press');posthog.captureException(e);document.getElementById('ph-said').textContent='Error sent to PostHog.';})()">Crash checkout (PostHog test)</button> <span id="ph-said"></span></p>
 </body>
 </html>
