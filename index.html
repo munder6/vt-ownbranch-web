@@ -5,6 +5,8 @@
   <h1>Your cart</h1>
   <ul id="items"></ul>
   <p id="cart-total" style="font-weight: bold; font-size: 20px"></p>
+  <p><a id="continue" href="#">Contniue shopping</a></p>
+  <p id="shipping-note">Free shiping over $50</p>
   <script>
     const items = ["Coffee beans", "Paper filters", "Milk frother"];
     document.getElementById("items").innerHTML = items.map((i) => `<li>${i}</li>`).join("");
